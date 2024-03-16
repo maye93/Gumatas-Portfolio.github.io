@@ -39,12 +39,15 @@ h3, h4, p, nav ul li a:hover {
     color: #EDE0D6;
 }
 
-h2, h5 {
+.highlight, h2, h5 {
     color: #d77540;
 }
 
-h1 {
+.semi-bold, h1 {
     color: #D14623;
+}
+
+h1 {
     font-family: "Neue Regrade Medium", sans-serif;
 }
 
@@ -64,18 +67,13 @@ h6 {
     font-family: "Neue Regrade Light", sans-serif;
 }
 
-li {
+.semi-bold, li {
     font-family: "Neue Regrade Semibold", sans-serif;
 }
 
 /* ----- TEXTS ----- */
-header,
-body {
+header, body {
     text-align: center;
-}
-
-li {
-    font-size: 1.5em;
 }
 
 h1 {
@@ -87,35 +85,36 @@ h1 {
 
 h2 {
     margin: 0;
-    padding: 0;
+    padding-bottom: 0.5em;
     font-size: 4em; 
+    line-height: 0.8;
 }
 
 h3 {
     justify-content: center;
-    top: 10%; /* Adjust as needed */
+    top: 10%;
     line-height: 1;
-    font-size: 2em; /* Adjust as needed */
+    font-size: 2em;
 }
 
 h4 {
-    margin-bottom: 3em;
-    font-size: 2em; /* Adjust as needed */
+    padding-bottom: 3em;
+    font-size: 2em;
 }
 
 h5 {
     margin: 0;
     padding: 0;
-    font-size: 3em; /* Adjust as needed */
+    font-size: 3em;
 }
 
-h6 {
-    font-size: 1em; /* Adjust as needed */
+.semi-bold, .highlight, h6 {
+    font-size: 1em;
 }
 
 p {
     margin: 0;
-    font-size: 1.5em; /* Adjust as needed */
+    font-size: 1.5em;
 }
 
 /* ----- HEADER/FOOTER ----- */
@@ -144,14 +143,24 @@ nav ul {
     list-style: none;
 }
 
+nav ul li {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
 nav ul li a {
-    margin: 0 100px;
-    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0 20px;
     list-style-position: inside;
-    line-height: 2;
+}
+
+a {
+    text-decoration: none;
 }
 
 footer {
+    margin-top: 3%;
     padding: 20px 0;
     display: flex;
     justify-content: center;
@@ -161,9 +170,14 @@ footer {
 
 footer p {
     margin: 0;
+    line-height: 1;
 }
 
-/* ----- BODY/DIVIDER ----- */
+/* ----- HTML/BODY/DIVIDER ----- */
+html {
+    scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }
@@ -173,32 +187,66 @@ body::-webkit-scrollbar {
     padding-bottom: 100px;
 }
 
-/* ----- CONTAINER ----- */
+/* ----- CONTAINERS ----- */
 .containers {
-    margin-left: 10%;
-    margin-right: 10%;
     display: flex;
     justify-content: center;
+}
+
+.column {
     align-items: center;
+    padding: 0 3%;
+}
+
+.containers ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.containers ul li {
+    margin-bottom: 1em;
 }
 
 .left-container, .right-container {
     width: 50%;
 }
 
-/* ----- IMAGES/VIDEOS ----- */
-.circle-image {
-    width: auto;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
+.left-container {
+    padding-left: 10%;
+}
+
+.right-container {
+    padding-right: 10%;
 }
 
 .video-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 0;
+    align-items: center;
+}
+
+/* ----- CONTACTS ----- */
+section#contact h4, img.PDF {
+    margin-bottom: 0em;
+}
+
+/* ----- IMAGES/VIDEOS/FILES ----- */
+.circle-image {
+    padding-top: 23%;
+    width: auto;
+    height: 30em;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.PDF {
+    max-width: 20%;
+    height: auto;
+}
+
+.resume {
+    align-self: flex-start;
 }
 
 .logo {
@@ -207,17 +255,35 @@ body::-webkit-scrollbar {
 }
 
 .aseprite {
-    width: auto;
-    height: 400px;
+    width: 80%;
+    height: 80%;
 }
 
 .bank-app {
-    width: auto;
-    height: 300px;
+    padding-top: 70px;
+    width: 60%;
+    height: 60%;
+    margin: 0;
 }
 
 .maya {
     padding: 10px;
+    width: auto;
+    height: 400px;
+}
+
+.side-scroller {
+    padding-top: 40%;
+}
+
+.pour-vida-sticker {
+    width: auto;
+    height: 500px;
+}
+
+.pour-vida-packaging {
+    padding-left: 20px;
+    padding-right: 20px;
     width: auto;
     height: 400px;
 }
@@ -286,52 +352,5 @@ body::-webkit-scrollbar {
     }
     to {
         opacity: 1;
-    }
-}
-
-/* ----- RESPONSIVE DESIGN ----- */
-@media only screen and (max-width: 768px) {
-    .containers {
-        flex-direction: column;
-    }
-
-    .left-container, .right-container {
-        width: 100%;
-    }
-
-    .video-container {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 5em;
-    }
-
-    h2 {
-        font-size: 3em;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        font-size: 1.5em;
-    }
-
-    h5 {
-        font-size: 2em;
-    }
-
-    h6 {
-        font-size: 0.8em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    nav ul li a {
-        margin: 0 50px;
     }
 }
