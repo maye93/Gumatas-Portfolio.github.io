@@ -128,7 +128,7 @@ header {
 }
 
 .header-text {
-    padding-top: 100px;
+    padding-top: 10%;
 }
 
 nav {
@@ -144,15 +144,14 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0 20px;
+    padding: 0 5em;
     display: flex;
-    align-items: center;
 }
 
 nav ul li a {
     font-size: 1.5em;
-    margin: 0 20px;
     list-style-position: inside;
+    white-space: nowrap;
 }
 
 a {
@@ -160,17 +159,14 @@ a {
 }
 
 footer {
-    margin-top: 3%;
-    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 2em;
+    height: 3em;
 }
 
 footer p {
     margin: 0;
-    line-height: 1;
 }
 
 /* ----- HTML/BODY/DIVIDER ----- */
@@ -183,8 +179,8 @@ body::-webkit-scrollbar {
 }
 
 .divider {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 .containers {
@@ -197,6 +193,17 @@ body::-webkit-scrollbar {
     padding: 0 3%;
 }
 
+/* ----- CONTAINERS ----- */
+.containers {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    align-items: center;
+    padding: 0 2%;
+}
+
 .containers ul {
     list-style: none;
     margin: 0;
@@ -204,7 +211,7 @@ body::-webkit-scrollbar {
 }
 
 .containers ul li {
-    margin-bottom: 1em;
+    margin-bottom: 1%;
 }
 
 .left-container, .right-container {
@@ -212,11 +219,11 @@ body::-webkit-scrollbar {
 }
 
 .left-container {
-    padding-left: 10%;
+    padding-left: 5%;
 }
 
 .right-container {
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
 .video-container {
@@ -232,7 +239,7 @@ body::-webkit-scrollbar {
     }
   
     .left-container, .right-container {
-        width: 100%;
+        width: 90%;
         padding: 0;
     }
 }
@@ -262,7 +269,7 @@ section#contact h4, img.PDF {
 
 .logo {
     width: auto;
-    height: 100px;
+    height: 5em;
 }
 
 .aseprite {
@@ -271,16 +278,26 @@ section#contact h4, img.PDF {
 }
 
 .bank-app {
-    padding-top: 70px;
-    width: 60%;
-    height: 60%;
+    padding-top: 7em;
+    width: auto;
+    height: 50em;
     margin: 0;
 }
 
+.coffee-shop {
+    width: 50em;
+    height: auto;
+}
+
+.escape-room {
+    width: 50em;
+    height: auto;
+}
+
 .maya {
-    padding: 10px;
+    padding: 1em;
     width: auto;
-    height: 400px;
+    height: 25em;
 }
 
 .side-scroller {
@@ -289,14 +306,13 @@ section#contact h4, img.PDF {
 
 .pour-vida-sticker {
     width: auto;
-    height: 500px;
+    height: 25em;
 }
 
 .pour-vida-packaging {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1em;
     width: auto;
-    height: 400px;
+    height: 25em;
 }
 
 /* ----- PROJECT COVER ----- */
